@@ -17,9 +17,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="iQD-dG-9N8">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zFQ-cs-Oqh">
+                                            <rect key="frame" x="97" y="9" width="107" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="error" id="LSs-NJ-5ao">
+                                            <rect key="frame" x="212" y="4" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="134" id="doX-OF-Xmy" customClass="MovieCell" customModule="MovieViewer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="134"/>
+                                        <rect key="frame" x="0.0" y="130" width="320" height="134"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="doX-OF-Xmy" id="oyr-jv-cK0">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="133.5"/>
@@ -59,6 +77,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="eAT-bw-Q6l"/>
                     <connections>
+                        <outlet property="networkErrorView" destination="iQD-dG-9N8" id="B03-jX-Xn9"/>
                         <outlet property="tableView" destination="ATk-4O-kr4" id="2AO-yH-55U"/>
                     </connections>
                 </viewController>
@@ -140,4 +159,7 @@
             <point key="canvasLocation" x="74" y="366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="error" width="30" height="30"/>
+    </resources>
 </document>
